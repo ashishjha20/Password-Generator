@@ -207,3 +207,24 @@ generateBtn.addEventListener('click', () => {
     //calculate strength
     calcStrength();
 });
+
+
+
+// Event listener for toggle switch
+// Select the elements
+const toggleSwitch = document.getElementById('temp');
+const label = document.querySelector('label[for="temp"]'); // Select the label
+const body = document.body; // Select the body
+
+// Add event listener for change event
+toggleSwitch.addEventListener('change', () => {
+    body.classList.toggle('dark'); // Toggle the dark class on body
+
+    // Change label text based on the checkbox state
+    if (toggleSwitch.checked) {
+        label.textContent = 'Dark Mode'; // Change label text to Light Mode
+    } else {
+        label.textContent = 'Light Mode'; // Change label text to Dark Mode
+    }
+});
+

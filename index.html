@@ -21,7 +21,7 @@
 
         <div class="display-container">
 
-            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+            <input readonly style="color: red;" placeholder="Password" class="display" data-passwordDisplay>
 
             <button class="copyBtn" data-copy>
                 <span class="tooltip" data-copyMsg></span>
@@ -30,13 +30,12 @@
 
         </div>
 
-
         <div class="input-container">
 
             <!--password length section-->
             <div class="length-container">
                 <p>Password Length</p>
-                <p data-lengthNumber>0</p>
+                <p style="color: red;" data-lengthNumber>0</p>
             </div>
             
             <!--slider-->
@@ -45,22 +44,22 @@
             <!-- checkboxes-->
             <div class="check">
                 <input type="checkbox" id="uppercase">
-                <label for="uppercase">Includes Uppercase letters</label>
+                <label  for="uppercase">Includes Uppercase letters</label>
             </div>
 
             <div class="check">
                 <input type="checkbox" id="lowercase">
-                <label for="lowercase">Includes Lowercase letters</label>
+                <label   for="lowercase">Includes Lowercase letters</label>
             </div>
 
             <div class="check">
                 <input type="checkbox" id="numbers">
-                <label for="numbers">Includes Numbers </label>
+                <label    for="numbers">Includes Numbers </label>
             </div>
 
             <div class="check">
                 <input type="checkbox" id="symbols">
-                <label for="symbols">Includes Symbols </label>
+                <label  for="symbols">Includes Symbols </label>
             </div>
 
             <!-- strength section-->
@@ -74,6 +73,12 @@
 
         </div>
 
+        <div class="toggle">
+            <input type="checkbox" id="temp">
+            <label for="temp">Switch</label>
+        </div>
+
+       
     </div>
     <script src="script.js"></script>
 </body>

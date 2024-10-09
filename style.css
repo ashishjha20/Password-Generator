@@ -6,6 +6,8 @@
     box-sizing: border-box;
     font-family: 'League Spartan', sans-serif;
 }
+
+
 :root {
 
     --dk-violet: hsl(249, 72%, 11%);
@@ -107,7 +109,7 @@ h1 {
 }
 
 .strength-container p{
-    color:rgb(180, 203, 3);
+    color:rgb(211, 42, 12);
     font-size: 1.5rem;
 }
 .indicator {
@@ -233,3 +235,252 @@ h1 {
     background-color: var(--dk-violet);
     box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
 }
+
+
+/* toggle */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Define the variables in CSS */
+:root {
+  --bg-color: #FFFFFF;
+  --toggle-bg-color: #ffffff;
+  --toggle-nub-color: yellowgreen;
+  --font-color: #4FBCA1;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  font-family: Montserrat, sans-serif;
+}
+
+.toggle {
+  margin-top: 40px;
+  margin-left: 250px;
+}
+
+.toggle input[type="checkbox"] {
+  display: none;
+}
+
+.toggle label {
+  color: var(--font-color);
+  position: relative;
+}
+
+.toggle input[type="checkbox"] + label::before {
+  content: ' ';
+  display: block;
+  height: 18px;
+  width: 45px;
+  border: 1px solid var(--toggle-bg-color);
+  border-radius: 9px;
+  position: absolute;
+  top: 0px;
+  left: -65px;
+  background: var(--toggle-bg-color);
+}
+
+.toggle input[type="checkbox"] + label::after {
+  content: ' ';
+  display: block;
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--toggle-nub-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: -75px;
+  background: var(--toggle-nub-color);
+  transition: all 0.3s ease-in;
+}
+
+.toggle input[type="checkbox"]:checked + label::after {
+  left: -40px;
+  transition: all 0.3s ease-in;
+}
+
+
+/* Reset and common styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* Default Light Mode (defined in :root) */
+:root {
+    --bg-color: #f0f0f5;
+    --toggle-bg-color: #01010f;
+    --my-color:black;
+    
+    --toggle-nub-color: #4d4d66;
+    --font-color: #0b0b33;
+
+    --dk-violet: hsl(181, 85%, 45%);
+    --lt-violet: hsl(297, 100%, 65%);
+    --lt-violet2: hsla(300, 87%, 65%, 0.6);
+    --vb-violet: hsl(303, 77%, 45%);
+    --vb-yellow: hsla(98, 100%, 50%, 0.8);
+    --pl-white: hsla(0, 0%, 90%, 0.854);
+    --vb-cyan: hsl(72, 100%, 50%);
+    --vb-cyan2: hsl(177, 92%, 55%);
+    --dk-text: hsl(198, 20%, 13%);
+}
+.check{
+color:black;
+
+}
+.zz{
+    color:black; 
+}
+
+/* Light Mode Styles */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+h1 {
+    color: var(--my-color);
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.display-container {
+    background-color: var(--dk-violet);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.display {
+    width: 100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: var(--vb-yellow);
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.generateButton {
+    background-color: var(--vb-violet);
+    color: var(--pl-white);
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    --bg-color: #1a1a2e;
+    --toggle-bg-color: #4d4d66;
+    --my-color:white;
+    --my-color1:rgb(180, 203, 3);
+    --toggle-nub-color: #f5f5f5;
+    --font-color: #6f0c0c;
+
+    --dk-violet: hsl(249, 72%, 19%);
+    --lt-violet: hsl(297, 50%, 50%);
+    --lt-violet2: hsla(300, 89%, 26%, 0.6);
+    --vb-violet: hsl(303, 77%, 45%);
+    --vb-yellow: hsla(98, 100%, 40%, 0.8);
+    --pl-white: hsla(0, 0%, 90%, 0.854);
+    --vb-cyan: hsl(72, 100%, 40%);
+    --vb-cyan2: hsl(177, 92%, 55%);
+    --dk-text: hsl(198, 20%, 80%);
+    background-color: var(--bg-color);
+}
+/* Light Mode Background */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(231deg, #f0f0f5 0%, #e0e0eb 50%, #c0c0db 100%);
+    transition: background-color 0.4s ease-in-out;
+    color: var(--font-color);
+}
+
+/* Dark Mode Background */
+body.dark {
+    --bg-color: #1a1a2e;
+    --toggle-bg-color: #4d4d66;
+    --toggle-nub-color: #f5f5f5;
+    --font-color: #6b6363;
+    background: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%, rgb(35, 3, 72) 50%, rgba(88, 7, 125, 1) 100%);
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* Toggle Button (Light Mode) */
+.toggle input[type="checkbox"] + label::before {
+    content: ' ';
+    display: block;
+    height: 18px;
+    width: 45px;
+    border: 1px solid var(--toggle-bg-color);
+    border-radius: 9px;
+    position: absolute;
+    top: 0px;
+    left: -65px;
+    background: var(--toggle-bg-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Toggle Button Thumb (Light Mode) */
+.toggle input[type="checkbox"] + label::after {
+    content: ' ';
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--toggle-nub-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -6px;
+    left: -75px;
+    background: var(--toggle-nub-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode Toggle */
+body.dark .toggle input[type="checkbox"] + label::before {
+    background: #2b2b94;
+}
+
+
+
+body.dark .toggle input[type="checkbox"] + label::after {
+    background: hsl(297, 50%, 50%);
+}
+
+.check label {
+    /* Your styles here */
+    color: var(--my-color); /* Example style */
+    
+}
+
+
+
+
+
+
+
